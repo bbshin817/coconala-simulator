@@ -128,7 +128,7 @@ c-part.product {
 
 c-part.product-thumbnail {
 	width: 100%;
-	aspect-ratio: 5/4;
+	aspect-ratio: 61/62;
 	background: linear-gradient(rgb(235, 235, 235), rgb(225, 225, 225));
 	background-position: center center;
 	background-repeat: no-repeat;
