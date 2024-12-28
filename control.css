@@ -1,0 +1,89 @@
+control {
+	position: relative;
+	background-color: var(--bc_1);
+	height: 100%;
+}
+
+control > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 800px;
+	width: 100%;
+	padding: 50px;
+}
+
+control > div > div {
+	padding: 50px 25px;
+	border-radius: 16px;
+	background-color: var(--bc_2);
+}
+
+t-part.title {
+	font-size: 24pt;
+	letter-spacing: .75pt;
+	margin-bottom: 50px;
+	color: var(--b09);
+	font-family: "product-sans";
+}
+
+t-part.input {
+	position: relative;
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid var(--b01);
+	transition: 0.3s ease;
+}
+
+t-part.input.focus {
+	background-color: var(--bc_1);
+	border-color: var(--bc_1);
+}
+
+t-part.input + t-part.input {
+	margin-top: 15px;
+}
+
+t-part.input-label {
+	position: absolute;
+	color: var(--b05);
+	font-size: 12pt;
+	letter-spacing: .25pt;
+	top: 50%;
+	left: 10px;
+	transform-origin: left center;
+	transform: translateY(-50%);
+	transition: 0.2s ease;
+}
+
+t-part.input.focus > t-part.input-label,
+t-part.input.inputed > t-part.input-label {
+	top: 0;
+	transform: translateY(2.5px) scale(0.8);
+}
+
+t-part.input > input {
+	outline: none;
+	border: none;
+	width: 100%;
+	padding: 0;
+	font-size: 16pt;
+	line-height: 16pt;
+	color: var(--b09);
+	background-color: rgba(0, 0, 0, 0);
+	transition: 0.3s ease;
+}
+
+t-part.input.focus > input,
+t-part.input.inputed > input {
+	margin-top: 15px;
+}
+
+t-part.input[data-value="image"] > label {
+	display: block;
+	width: 100%;
+	height: 32px;
+	z-index: 2;
+}
